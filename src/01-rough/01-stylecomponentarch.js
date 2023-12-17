@@ -42,14 +42,34 @@ const SourceLink = styled.a`
     content: "—";
   }
 `;
+// const App = () => (
+//   <Quote
+//     by="Bill Gates (Allegedly)"
+//     source="https://quoteinvestigator.com/2011/09/08/640k-enough/"
+//   >
+//     640kb of memory ought to be enough for anyone
+//   </Quote>
+// );
+const Title = ({ id, children }) => {
+  return (
+    <h1
+      id={id}
+      css={`
+        font-size: 2rem;
+        font-weight: bold;
+      `}
+    >
+      {children}
+    </h1>
+  );
+};
 
 const App = () => (
-  <Quote
-    by="Bill Gates (Allegedly)"
-    source="https://quoteinvestigator.com/2011/09/08/640k-enough/"
+  <Title
+    id="Bill Gates (Allegedly)--------"
+    children="https://quoteinvestigator.com/2011/09/08/640k-enough/"
   >
     640kb of memory ought to be enough for anyone
-  </Quote>
+  </Title>
 );
-
 export default App;
